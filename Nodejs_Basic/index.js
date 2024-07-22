@@ -80,5 +80,7 @@ if(operation == 'read'){
             console.log( `A list of all files and directories in the current directory: ${data}`);
         }
     })
+}else{
+    console.log(`Invalid operation '${operation}'`);
 }
 
