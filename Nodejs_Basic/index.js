@@ -72,14 +72,8 @@ if(operation == 'read'){
         }
     })
 } else if(operation == 'list'){
-    fs.readdir('./Nodejs_Basic','utf-8',(data, err)=>{
-        if(err){
-            console.log(err);
-        }else{
-            console.log(data)
-            console.log( `A list of all files and directories in the current directory: ${data}`);
-        }
-    })
+    let data = fs.readdirSync('./','utf-8')
+    console.log(`A list of all files and directories in the current directory.:${data}`);
 }else{
     console.log(`Invalid operation '${operation}'`);
 }
